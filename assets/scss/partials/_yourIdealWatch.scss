@@ -1,0 +1,13 @@
+#yourIdealWatchContent{
+    @include displayFlex();
+    img{
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    h2{
+        font-size: 28px;
+        text-align: center;
+        font-weight: $semiBold;
+    }
+    margin-bottom: 50px;
+}

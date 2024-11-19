@@ -1,0 +1,47 @@
+#counter{
+    height: 257px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/Counter2.jpg');
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: cover;
+    position: relative;
+    .container{
+        @include displayFlex();
+        height: inherit;
+        .counter-left{
+            
+            h2{
+                text-transform: capitalize;
+                color: $white;
+                font-size: 44px;
+                font-weight: $semiBold;
+                span{
+                    color: $cream;
+                    font-size: inherit;
+                    font-weight: inherit;
+                }
+            }
+        }
+        .counter-right{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: center;
+            div{
+                h2{
+                    color: $white;
+                    font-size: 44px;
+                    font-weight: $semiBold;
+                }
+                p{
+                    color: $cream;
+                }
+            }
+            h3{
+                color: $white;
+                font-size: 44px;
+                margin-bottom: 6%;
+            }
+        }
+    }    
+}

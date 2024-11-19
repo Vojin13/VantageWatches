@@ -1,0 +1,118 @@
+@media screen and (max-width: 1675px) {
+  .container {
+    width: 90%;
+  }
+  #main #main-right {
+    width: 50%;
+  }
+  #main #main-right div img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #main #main-left div h2 {
+    font-size: 30px;
+  }
+  #main #main-left div h1 {
+    font-size: 32px;
+  }
+  #newArrivals #watches {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20%;
+  }
+  #counter .container .counter-left h2 {
+    font-size: 30px;
+  }
+  #counter .container .counter-right {
+    gap: 20px;
+  }
+  #counter .container .counter-right h3 {
+    font-size: 24px;
+    margin-bottom: 9%;
+  }
+  #counter .container .counter-right div h2 {
+    font-size: 36px;
+  }
+  #yourIdealWatch #yourIdealWatchContent {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  #brands {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #main #main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  #main #main-content #main-left div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #main #main-content #main-left div h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  #main #main-content #main-right div img {
+    margin-bottom: 30px;
+  }
+  #counter .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #counter .container .counter-left {
+    margin-bottom: 20px;
+  }
+  #counter .container .counter-left h2 {
+    font-size: 36px;
+  }
+  #newsletter .container #newsletter-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #newsletter .container #newsletter-content p {
+    text-align: center;
+    width: 60%;
+  }
+  footer .container #footer-main #footer-info p {
+    display: none;
+  }
+  footer .container #footer-main #footer-info h2 {
+    font-size: 20px;
+  }
+  footer .container #footer-main #footer-links h2 {
+    font-size: 20px;
+  }
+  footer .container #footer-main #footer-links a {
+    font-size: 16px;
+  }
+  footer .container #footer-main #footer-contact {
+    margin-bottom: 30px;
+  }
+  footer .container #footer-main #footer-contact h2 {
+    font-size: 20px;
+  }
+  footer .container #footer-main #footer-contact a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 680px) {
+  #brands {
+    display: none;
+  }
+}/*# sourceMappingURL=responsive.css.map */

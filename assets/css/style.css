@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#main {
+  position: relative;
+  height: 100vh;
+  background-color: #011426;
+}
+#main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#main nav a.logo {
+  display: block;
+  width: 130px;
+}
+#main nav a.logo #logo-block {
+  background-image: url("../img/Logo.png");
+  width: 130px;
+  height: 130px;
+}
+#main nav ul {
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+}
+#main nav ul li a {
+  color: #FFFFFF;
+}
+#main nav ul li a.active-link {
+  color: #FFC993;
+}
+#main #main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 90vh;
+}
+#main #main-left h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #FFC993;
+  margin-bottom: -10px;
+}
+#main #main-left h1 {
+  font-size: 44px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+#main #main-left a {
+  text-transform: uppercase;
+  background-color: #FFC993;
+  padding: 8px 25px;
+  border-radius: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+}
+#main #main-right img {
+  background-image: radial-gradient(#FFC993, #011426 60%);
+}
+
+#newArrivals #watches {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#newArrivals #watches .watch {
+  margin-bottom: 50px;
+  position: relative;
+}
+#newArrivals #watches .watch p:nth-of-type(1) {
+  font-weight: 300;
+}
+#newArrivals #watches .watch p:nth-of-type(2) {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: -7.5px;
+}
+#newArrivals #watches .watch p:nth-of-type(3) {
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#newArrivals #watches .watch a {
+  color: #FFFFFF;
+  background-color: #FF8000;
+  border-radius: 7px;
+  padding: 5px 18px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#yourIdealWatchContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+#yourIdealWatchContent img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+#yourIdealWatchContent h2 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#counter {
+  height: 257px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Counter2.jpg");
+  position: relative;
+}
+#counter .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: inherit;
+}
+#counter .container .counter-left h2 {
+  text-transform: capitalize;
+  color: #FFFFFF;
+  font-size: 44px;
+  font-weight: 600;
+}
+#counter .container .counter-left h2 span {
+  color: #FFC993;
+  font-size: inherit;
+  font-weight: inherit;
+}
+#counter .container .counter-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+#counter .container .counter-right div h2 {
+  color: #FFFFFF;
+  font-size: 44px;
+  font-weight: 600;
+}
+#counter .container .counter-right div p {
+  color: #FFC993;
+}
+#counter .container .counter-right h3 {
+  color: #FFFFFF;
+  font-size: 44px;
+  margin-bottom: 6%;
+}
+
+#newsletter {
+  background-image: url("../img/newsletter-background.jpg");
+}
+#newsletter #newsletter-content {
+  padding: 100px 0px;
+}
+#newsletter #newsletter-content h2 {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 36px;
+}
+#newsletter #newsletter-content p {
+  color: #FFFFFF;
+  font-size: 17px;
+  width: 36%;
+  margin-bottom: 20px;
+}
+
+#newsletter-forma input {
+  font-size: 17px;
+  padding-left: 15px;
+  padding-top: 2px;
+  outline: none;
+  border-radius: 5px 0px 0px 5px;
+  width: 350px;
+  height: 40px;
+  border: 0px;
+}
+#newsletter-forma input::-moz-placeholder {
+  font-size: 17px;
+}
+#newsletter-forma input::placeholder {
+  font-size: 17px;
+}
+#newsletter-forma input:focus {
+  outline: none;
+  font-size: 17px;
+}
+#newsletter-forma button {
+  border: 0px;
+  height: 41px;
+  width: 41px;
+  margin-left: -5px;
+  background-color: #037D9C;
+  color: #FFFFFF;
+  border-radius: 0px 5px 5px 0px;
+}
+#newsletter-forma button:hover {
+  background: #0C6E86;
+  cursor: pointer;
+}
+
+#brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+footer {
+  position: relative;
+  background-color: #011426;
+}
+footer #footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-items: start;
+  color: #FFFFFF;
+  padding-bottom: 8%;
+}
+footer #footer-main #footer-info {
+  width: 40%;
+}
+footer #footer-main #footer-info h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+footer #footer-main #footer-info p {
+  font-size: 14px;
+  font-weight: 300;
+  width: 80%;
+}
+footer #footer-main #footer-links {
+  margin-top: 45px;
+  width: 30%;
+}
+footer #footer-main #footer-links h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+footer #footer-main #footer-links ul {
+  list-style-type: none;
+}
+footer #footer-main #footer-links ul li a {
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+footer #footer-main #footer-contact {
+  margin-top: 45px;
+}
+footer #footer-main #footer-contact h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+footer #footer-main #footer-contact a {
+  color: #FFFFFF;
+  display: block;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer #copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer #copyright hr {
+  background: linear-gradient(90deg, #0f172a 0%, #94A3B8 50%, #0f172a 100%);
+  border: none;
+  height: 1px;
+  margin: 10px 0px;
+}
+footer #copyright p {
+  color: #94A3B8;
+  font-size: 16px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.section-header {
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.heading-bottom {
+  background-color: #FF8000;
+  height: 5px;
+  width: 80px;
+  margin: 0px auto 50px auto;
+}
+
+.container-main {
+  width: 84.375%;
+  margin: 0px auto;
+}
+
+.container {
+  width: 75.625%;
+  margin: 0px auto;
+}
+
+.limited-edition {
+  background-image: url("../img/Limited.png");
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}/*# sourceMappingURL=style.css.map */

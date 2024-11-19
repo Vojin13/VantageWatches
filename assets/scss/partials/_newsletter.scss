@@ -1,0 +1,50 @@
+#newsletter{
+    background-image: url("../img/newsletter-background.jpg");
+    #newsletter-content{
+        padding: 100px 0px;
+        h2{
+            color: $white;
+            font-weight: $semiBold;
+            font-size: 36px;
+        }
+        p{
+            color: $white;
+            font-size: 17px;
+            width: 36%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+#newsletter-forma{
+    input{
+        font-size: 17px;
+        padding-left: 15px;
+        padding-top: 2px;
+        &::placeholder{
+            font-size: 17px;
+        }
+        &:focus{
+            outline: none;
+            font-size: 17px;
+        }
+        outline: none;
+        border-radius: 5px 0px 0px 5px;
+        width: 350px;
+        height: 40px;
+        border: 0px;
+    }
+    button{
+        border: 0px;
+        height: 41px;
+        width: 41px;
+        margin-left: -5px;
+        background-color: #037D9C;
+        color: $white;
+        border-radius: 0px 5px 5px 0px;
+        &:hover{
+            background: #0C6E86;
+            cursor: pointer;
+        }
+    }
+}

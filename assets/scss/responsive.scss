@@ -1,0 +1,181 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+@media screen and (max-width: 1675px) {
+
+    .container{
+        width: 90%;
+    }
+
+    #main{
+        #main-right{
+            width: 50%;
+            div{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px)
+{
+    #main{
+        // #main-content{
+        //     @include displayFlex(center,center,column);
+        //     #main-left{
+        //         div{
+        //             @include displayFlex(center,center,column);
+        //             h1{
+        //                 font-size: 38px;
+        //                 margin-bottom: 10px;
+        //             }
+        //         }
+        //     }
+        // }
+        #main-left{
+            div{
+                h2{
+                    font-size: 30px;
+                }
+                h1{
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    #newArrivals{
+        #watches{
+            @include displayFlex(center,center,row);
+            flex-wrap: wrap;
+            gap: 20%;
+        }
+    }
+
+    #counter{
+        .container{
+            .counter-left{
+                h2{
+                    font-size: 30px;
+                }
+            }
+            .counter-right{
+                gap: 20px;
+                h3{
+                    font-size: 24px;
+                    margin-bottom: 9%;
+                }
+                div{
+                    h2{
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+    #yourIdealWatch{
+        #yourIdealWatchContent{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    #brands{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    #main{
+        #main-content{
+            @include displayFlex(center,center,column-reverse);
+             #main-left{
+                 div{
+                     @include displayFlex(center,center,column);
+                     h1{
+                         font-size: 38px;
+                         margin-bottom: 10px;
+                     }
+                 }
+             }
+             #main-right{
+                div{
+                    img{
+                        margin-bottom: 30px;
+                    }
+                }
+             }
+         }
+    }
+
+    #counter{
+        .container{
+            @include displayFlex(center,center,column);
+            .counter-left{
+                margin-bottom: 20px;
+                h2{
+                   font-size: 36px; 
+                }
+            }
+        }
+    }
+
+    #newsletter{
+        .container{
+            #newsletter-content{
+            @include displayFlex(center,center,column);
+                p{
+                    text-align: center;
+                    width: 60%;   
+                }
+            }
+        }
+    }
+    
+    footer{
+        .container{
+            #footer-main{
+                #footer-info{
+                    p{
+                        display: none;
+                    }
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+
+                #footer-links{
+                    h2{
+                        font-size: 20px;
+                    }
+                    a{
+                        font-size: 16px;
+                    }
+                }
+
+                #footer-contact{
+                    margin-bottom: 30px;
+                    h2{
+                        font-size: 20px;
+                    }
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px)
+{
+    #brands{
+        display: none;
+    }
+}
