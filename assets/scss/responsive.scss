@@ -50,7 +50,6 @@
         #watches{
             @include displayFlex(center,center,row);
             flex-wrap: wrap;
-            gap: 20%;
         }
     }
 
@@ -175,7 +174,124 @@
 
 @media screen and (max-width: 680px)
 {
+    .container{
+        width: 95%;
+    }
+
+    .container-main{
+        width: 95%;
+    }
+
+    #main{
+        #menu{
+            @include displayFlex(center,center,column);
+            ul{
+                li{
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        #main-content{
+            #main-left{
+                div{
+                    h1{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
     #brands{
         display: none;
+    }
+
+    footer{
+        .container{
+            #footer-main{
+                #footer-info{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #counter{
+        .container{
+            .counter-left{
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    #yourIdealWatchContent{
+        .ideal-watch{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px)
+{
+    .section-header{
+        font-size: 28px;
+        font-weight: $semiBold;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #counter{
+        .container{
+            .counter-left{
+                h2{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    #main{
+        #menu{
+            ul{
+                gap: 10px;
+            }
+        }
+    }
+
+    #counter{
+        .container{
+            .counter-right{
+                display: none;
+            }
+        }
+    }
+
+    #newsletter{
+        display: none;
+    }
+
+    footer{
+        .container{
+            #footer-main{
+                #footer-links{
+                    width: 45%;
+                    margin-bottom: 30%;
+                }
+                #footer-contact{
+                    width: 50%;
+                    margin-bottom: 30%;
+                }
+            }
+        }
     }
 }

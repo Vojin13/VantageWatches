@@ -45,7 +45,7 @@ const mainWatch = {
 
 const mainLeftSection = document.querySelector('#main-left')
 
-html = `<div><h2>${mainWatch.Serial}</h2><h1>${mainWatch.Name}</h1><a href='shop'>Find more</a></div>`
+html = `<div><h2>${mainWatch.Serial}</h2><h1>${mainWatch.Name}</h1><a href='shop.html'>Find more</a></div>`
 mainLeftSection.innerHTML += html
 
 const mainRightSection = document.querySelector('#main-right')
