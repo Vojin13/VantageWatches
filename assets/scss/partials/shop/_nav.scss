@@ -1,0 +1,39 @@
+#nav{
+    background-color: $primary;
+    nav{
+        @include displayFlex();
+        a{
+            &.logo{
+            display: block;
+            width: 130px;
+            #logo-block{
+                background-image: url('../img/Logo.png');
+                width: 130px;
+                height: 130px;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            gap: 2em;
+            list-style-type: none;
+            li{
+                a{
+                    color: $white;
+                    
+                    &.active-link{
+                        color: $cream;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#shopHeading{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/Counter.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0px;
+    color: $white;
+}

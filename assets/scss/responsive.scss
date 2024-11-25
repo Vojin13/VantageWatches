@@ -193,6 +193,20 @@
                 }
             }
         }
+
+        #nav{
+            #menu{
+                @include displayFlex(center,center,column);
+                ul{
+                    li{
+                        a{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
         #main-content{
             #main-left{
                 div{
@@ -261,6 +275,14 @@
     }
 
     #main{
+        #menu{
+            ul{
+                gap: 10px;
+            }
+        }
+    }
+
+    #nav{
         #menu{
             ul{
                 gap: 10px;

@@ -290,6 +290,79 @@ footer #copyright p {
   text-align: center;
 }
 
+#nav {
+  background-color: #011426;
+}
+#nav nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#nav nav a.logo {
+  display: block;
+  width: 130px;
+}
+#nav nav a.logo #logo-block {
+  background-image: url("../img/Logo.png");
+  width: 130px;
+  height: 130px;
+}
+#nav nav ul {
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+}
+#nav nav ul li a {
+  color: #FFFFFF;
+}
+#nav nav ul li a.active-link {
+  color: #FFC993;
+}
+
+#shopHeading {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Counter.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 0px;
+  color: #FFFFFF;
+}
+
+#products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#products .watch {
+  margin: 50px 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+#products .watch p:nth-of-type(1) {
+  font-weight: 300;
+}
+#products .watch p:nth-of-type(2) {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: -7.5px;
+}
+#products .watch p:nth-of-type(3) {
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#products .watch a {
+  color: #FFFFFF;
+  background-color: #FF8000;
+  border-radius: 7px;
+  padding: 5px 18px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;

@@ -4,13 +4,16 @@
 //Parcijali
 @import "partials/variables";
 @import "partials/mixins";
-@import "partials/main";
-@import "partials/newArrivals";
-@import "partials/yourIdealWatch";
-@import "partials/counter";
-@import "partials/newsletter";
-@import "partials/brands";
-@import "partials/footer";
+@import "partials/index/main";
+@import "partials/index/newArrivals";
+@import "partials/index/yourIdealWatch";
+@import "partials/index/counter";
+@import "partials/index/newsletter";
+@import "partials/index/brands";
+@import "partials/index/footer";
+
+@import "partials/shop/nav";
+@import "partials/shop/products";
 
 *{
     box-sizing: border-box;

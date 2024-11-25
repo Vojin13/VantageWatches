@@ -126,6 +126,15 @@
   #main #menu ul li a {
     font-size: 16px;
   }
+  #main #nav #menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #main #nav #menu ul li a {
+    font-size: 16px;
+  }
   #main #main-content #main-left div h1 {
     text-align: center;
   }
@@ -159,6 +168,9 @@
     font-size: 28px;
   }
   #main #menu ul {
+    gap: 10px;
+  }
+  #nav #menu ul {
     gap: 10px;
   }
   #counter .container .counter-right {
