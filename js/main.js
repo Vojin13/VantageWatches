@@ -71,7 +71,7 @@ const allWatches = [
         Limited: false
     },
     {
-        Name: 'Shinola Monster The Lava Lake',
+        Name: 'Shinola The Lava Lake',
         Serial: 'SM100',
         Price: '$1,800',
         Image: 'Shinola Monster The Lava Lake',

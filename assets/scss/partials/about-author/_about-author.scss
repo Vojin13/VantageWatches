@@ -1,0 +1,37 @@
+#about-author-section{
+    @include displayFlex();
+    margin: 0px auto;
+    width: 80%;
+    margin-top: 50px;
+    #image-holder{
+        width: 60%;
+        img{
+            width: 80%;
+            border-radius: 50%;
+        }
+    }
+
+    #text-holder{
+        h2{
+            font-size: 30px;
+            color: $primary;
+            text-transform: uppercase;
+        }
+        width: 50%;
+        color: $black; 
+        p{
+            font-size: 20px;
+        }
+    }
+}
+
+.about-holder{
+    padding-bottom: 50px;
+    background-color: $white;
+}
+
+#aboutHeading{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/newsletter-background.jpg');
+    padding: 50px 0px;
+    color: $white;
+}

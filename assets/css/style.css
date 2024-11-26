@@ -321,7 +321,7 @@ footer #copyright p {
 }
 
 #shopHeading {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Counter.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Counter2.jpg");
   background-size: cover;
   background-position: center center;
   padding: 50px 0px;
@@ -361,6 +361,46 @@ footer #copyright p {
   padding: 5px 18px;
   text-transform: uppercase;
   font-size: 16px;
+}
+
+#about-author-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px auto;
+  width: 80%;
+  margin-top: 50px;
+}
+#about-author-section #image-holder {
+  width: 60%;
+}
+#about-author-section #image-holder img {
+  width: 80%;
+  border-radius: 50%;
+}
+#about-author-section #text-holder {
+  width: 50%;
+  color: #000000;
+}
+#about-author-section #text-holder h2 {
+  font-size: 30px;
+  color: #011426;
+  text-transform: uppercase;
+}
+#about-author-section #text-holder p {
+  font-size: 20px;
+}
+
+.about-holder {
+  padding-bottom: 50px;
+  background-color: #FFFFFF;
+}
+
+#aboutHeading {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/newsletter-background.jpg");
+  padding: 50px 0px;
+  color: #FFFFFF;
 }
 
 * {

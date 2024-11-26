@@ -109,6 +109,15 @@
   footer .container #footer-main #footer-contact a {
     font-size: 16px;
   }
+  #about-author-section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  #about-author-section #text-holder p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 680px) {
   .container {

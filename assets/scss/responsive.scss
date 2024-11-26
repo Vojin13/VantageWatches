@@ -170,6 +170,19 @@
             }
         }
     }
+
+    #about-author-section{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
+        #text-holder{
+            p{
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 680px)
