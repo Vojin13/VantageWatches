@@ -137,6 +137,25 @@ const nav = [
     }
 ]
 
+const brands = [
+    'Arnold & Son',
+    'Breguet',
+    'Breitling',
+    'Bremont',
+    'Bulova',
+    'Defy',
+    'Hamilton',
+    'NOMOS',
+    'Shinola',
+    'Zenith',
+    'Cartier',
+    'Rolex',
+    'Casio',
+    'Tissot',
+    'Longines'
+]
+
+
 let pathName = window.location.pathname
 
 if(pathName == '/')
@@ -150,18 +169,7 @@ if(pathName == '/index.html')
 
     // Main
 
-    const navMenu = document.querySelector('#menu')
-
-    var html = '<ul>'
-
-    for(let element of nav)
-    {
-        html += `<li><a href="${element.Link}" class="${element.Active ? 'active-link' : ' '}">${element.PageName}</a></li>`
-    }
-
-    html += '</ul>'
-
-    navMenu.innerHTML += html
+    renderNav('#menu', nav)
 
     const mainWatch = {
         Name: 'Space Timer Jupiter Gold',
@@ -261,13 +269,38 @@ if(pathName == '/index.html')
 
     yourIdealWatchSection.innerHTML += html;
 
+    // Newsletter
+
+    const emailInput = document.querySelector('#email')
+    const submit = document.querySelector('#submit')
+
+    submit.addEventListener('click',function(e){
+        e.preventDefault()
+        const emailValue = emailInput.value.trim()
+        const emailRegEx = /^[\w\d\.]+@[\w\d\.]+\.[a-zA-Z\d]{2,}$/
+        const errorMsg = document.querySelector('#error > span')
+        if(emailRegEx.test(emailValue)){
+            errorMsg.classList.remove('d-none')
+            errorMsg.classList.remove('error')
+            errorMsg.classList.add('success')
+            errorMsg.textContent = "Your email address has been successfully submitted!"
+            emailInput.value = ''
+        }
+        else{
+            errorMsg.classList.remove('d-none')
+            errorMsg.classList.remove('success')
+            errorMsg.classList.add('error')
+            errorMsg.textContent = "Must contain '\@' and a domain, e.g., example.com."
+        }
+    })
+
     // Brands
 
     const brandsSection = document.querySelector('#brands')
 
     html = ''
 
-    const brandNames = ['Cartier','Rolex','Casio','Tissot','Longines']
+    const brandNames = brands.slice(brands.length-5,brands.length)
 
     for(let element of brandNames)
     {
@@ -278,18 +311,7 @@ if(pathName == '/index.html')
 
     // Footer
 
-    const quickLinks = document.querySelector('#footer-links')
-
-    html = '<ul>'
-
-    for(let element of nav)
-    {
-        html += `<li><a href='${element.Link}'>${element.PageName}</a></li>`
-    }
-
-    html += '</ul>'
-
-    quickLinks.innerHTML += html
+    renderFooter('#footer-links', nav)
 }
 
 // Shop
@@ -298,18 +320,7 @@ else if(pathName == '/shop.html'){
 
     nav[1].Active = true
 
-    const navMenu = document.querySelector('#menu')
-
-    html = '<ul>'
-
-    for(let element of nav)
-    {
-        html += `<li><a href="${element.Link}" class="${element.Active ? 'active-link' : ' '}">${element.PageName}</a></li>`
-    }
-
-    html += '</ul>'
-
-    navMenu.innerHTML += html
+    renderNav('#menu', nav)
 
     const products = document.querySelector('#products')
 
@@ -332,59 +343,121 @@ else if(pathName == '/shop.html'){
 
     products.innerHTML = html
 
-    const quickLinks = document.querySelector('#footer-links')
-
-    html = '<ul>'
-
-    for(let element of nav)
-    {
-        html += `<li><a href='${element.Link}'>${element.PageName}</a></li>`
-    }
-
-    html += '</ul>'
-
-    quickLinks.innerHTML += html
+    renderFooter('#footer-links', nav)
 }
 
 else if(pathName == '/contact.html')
 {
     nav[2].Active = true
 
-    const navMenu = document.querySelector('#menu')
+    renderNav('#menu', nav)
 
-    html = '<ul>'
+    // Dinamicko ispisivanje ddl liste
 
-    for(let element of nav)
+    const brandsSelect = document.querySelector('#brand')
+
+    html = '<option value="0">Choose...</option>'
+
+    for(let index in brands)
     {
-        html += `<li><a href="${element.Link}" class="${element.Active ? 'active-link' : ' '}">${element.PageName}</a></li>`
+        html += `<option value='${+index+1}'>${brands[index]}</option>`
     }
 
-    html += '</ul>'
+    brandsSelect.innerHTML = html
 
-    navMenu.innerHTML += html
+    // Validacija forme
 
-    const quickLinks = document.querySelector('#footer-links')
+    // Dohvatanje elemenata
 
-    html = '<ul>'
+    const firstName = document.querySelector("#firstName")
+    const lastName = document.querySelector("#lastName")
+    const email = document.querySelector("#email")
+    const phone = document.querySelector("#phone")
+    const brand = document.querySelector("#brand")
+    const message = document.querySelector("#message")
+    const submit = document.querySelector("#submit")
 
-    for(let element of nav)
-    {
-        html += `<li><a href='${element.Link}'>${element.PageName}</a></li>`
-    }
+    const radioError = document.querySelector('#radioError')
+    const cbError = document.querySelector('#cbError')
 
-    html += '</ul>'
+    submit.addEventListener("click",function(е){
+        е.preventDefault()
+        let valid = true
 
-    quickLinks.innerHTML += html
+        const watchType = document.querySelector('input[name="watchType"]:checked')
+        const features = document.querySelector('input[name="features"]:checked')
+
+        // RegEx
+        const regFirstName = /^[A-Z][a-z]{2,15}(\s[A-Z][a-z]{2,15})*$/
+        const regLastName = /^[A-Z][a-z]{2,20}(\s[A-Z][a-z]{2,20})*$/
+        const regEmail = /^[\w\d\.]+@[\w\d\.]+\.[a-zA-Z\d]{2,}$/
+        const regPhone = /^(\+)?[0-9]{7,15}$/
+
+        testRegEx(regFirstName,firstName)
+        testRegEx(regLastName,lastName)
+        testRegEx(regEmail,email)
+        testRegEx(regPhone,phone)
+
+        valid = valid && testRegEx(regFirstName,firstName)
+        valid = valid && testRegEx(regLastName,lastName)
+        valid = valid && testRegEx(regEmail,email)
+        valid = valid && testRegEx(regPhone,phone)
+
+        if(brand.selectedIndex == 0) {
+            brand.nextElementSibling.classList.remove('d-none')
+            valid = false
+        }
+        else {
+            brand.nextElementSibling.classList.add('d-none')
+        }
+
+
+        if(!watchType) {
+            radioError.classList.remove('d-none')
+            valid = false
+        }
+        else {
+            radioError.classList.add('d-none')
+        }
+
+        if(!features) {
+            cbError.classList.remove('d-none')
+            valid = false
+        }
+        else {
+            cbError.classList.add('d-none')
+        }
+
+        if(valid) {
+
+        } 
+        else {
+
+        }
+
+        
+        
+        
+    })
+
+    renderFooter('#footer-links', nav)
 }
 
 else if(pathName == '/about-author.html')
 {
     nav[3].Active = true
-    const navMenu = document.querySelector('#menu')
 
-    html = '<ul>'
+    renderNav('#menu', nav)
 
-    for(let element of nav)
+    renderFooter('#footer-links', nav)
+}
+
+function renderNav(menuSelector, navArray) {
+    const navMenu = document.querySelector(menuSelector)
+
+    var html = '<ul>'
+
+    for(let element of navArray)
     {
         html += `<li><a href="${element.Link}" class="${element.Active ? 'active-link' : ' '}">${element.PageName}</a></li>`
     }
@@ -392,12 +465,14 @@ else if(pathName == '/about-author.html')
     html += '</ul>'
 
     navMenu.innerHTML += html
+}
 
-    const quickLinks = document.querySelector('#footer-links')
+function renderFooter(footerSelector, navArray) {
+    const quickLinks = document.querySelector(footerSelector)
 
-    html = '<ul>'
+    var html = '<ul>'
 
-    for(let element of nav)
+    for(let element of navArray)
     {
         html += `<li><a href='${element.Link}'>${element.PageName}</a></li>`
     }
@@ -406,3 +481,22 @@ else if(pathName == '/about-author.html')
 
     quickLinks.innerHTML += html
 }
+
+function testRegEx(regEx,object) {
+    if(regEx.test(object.value.trim())) {
+        object.nextElementSibling.classList.add('d-none')
+        return true
+    }
+    else {
+        object.nextElementSibling.classList.remove('d-none')
+        return false
+    }
+}
+
+// jQuery
+
+$(document).ready(function(){
+    
+    
+    
+})

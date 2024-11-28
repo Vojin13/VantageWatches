@@ -183,6 +183,21 @@
             }
         }
     }
+
+    #contact{
+        justify-content: center;
+        flex-direction: column-reverse;
+        #map{
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 855px) {
+    #products{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 680px)
@@ -195,6 +210,22 @@
         width: 95%;
     }
 
+        #nav{
+            .container-main{
+                nav{
+                    @include displayFlex(center,center,column);
+                    padding-bottom: 20px;
+                    ul{
+                        li{
+                            a{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     #main{
         #menu{
             @include displayFlex(center,center,column);
@@ -206,19 +237,7 @@
                 }
             }
         }
-
-        #nav{
-            #menu{
-                @include displayFlex(center,center,column);
-                ul{
-                    li{
-                        a{
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
+    
 
         #main-content{
             #main-left{

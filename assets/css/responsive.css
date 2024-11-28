@@ -118,6 +118,19 @@
   #about-author-section #text-holder p {
     font-size: 16px;
   }
+  #contact {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  #contact #map {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 855px) {
+  #products {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 680px) {
   .container {
@@ -126,6 +139,16 @@
   .container-main {
     width: 95%;
   }
+  #nav .container-main nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  #nav .container-main nav ul li a {
+    font-size: 16px;
+  }
   #main #menu {
     display: flex;
     justify-content: center;
@@ -133,15 +156,6 @@
     flex-direction: column;
   }
   #main #menu ul li a {
-    font-size: 16px;
-  }
-  #main #nav #menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  #main #nav #menu ul li a {
     font-size: 16px;
   }
   #main #main-content #main-left div h1 {

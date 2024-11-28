@@ -1,0 +1,150 @@
+#contact{
+    @include displayFlex();
+    gap: 10%;
+    padding: 50px 0px;
+    width: 80%;
+
+    h1{
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    #map{
+        width: 70%;
+        iframe{
+            width: 100%;
+            height: 500px;
+        }
+    }
+
+    form{
+
+        .formLabel{
+            font-size: 20px;
+            color: #002762;
+            text-transform: uppercase;
+        }
+
+        textarea{
+            padding: 5px 15px;
+            border: 1px solid #002762;
+            color: black;
+            border-radius: 5px;
+            outline: none;
+            resize: vertical;
+            height: 150px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            &:focus{
+                box-shadow: 0px 0px 5px $orange;
+            }
+        }
+
+        input{
+            font-size: 16px;
+            padding: 5px 15px;
+            border: 1px solid #002762;
+            color: black;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 20px;
+            
+            select{
+                width: 100%;
+            }
+        }
+
+        input[type="text"]{
+            &:focus{
+                box-shadow: 0px 0px 5px $orange;
+            }
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        button{
+            background-color: transparent;
+            border: 1px solid #002762;
+            border-radius: 5px;
+            padding: 10px 0px;
+            width: 40%;
+            margin: 0px auto;
+            color: #002762;
+        }
+
+        #formBottom{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            select{
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+                font-size: 16px;
+                padding: 5px 15px;
+                border: 1px solid #002762;
+                color: black;
+                border-radius: 5px;
+                outline: none;
+            }
+            input{
+                display: block
+            }
+            .box{
+                display: flex;
+                input{
+                    margin: 0px;
+                    margin-right: 10px;
+                    padding: 0px;
+                    display: flex;
+                }
+                &:last-of-type{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        @include displayFlex(center,center,column);
+        width: 100%;
+
+        #form-left{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+        }
+        #form-right{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+        }
+
+        #formUpper{
+            display: flex;
+            width: 100%;
+            gap: 30px;
+            justify-content: space-between;
+            input{
+                width: 100%;
+            }
+        }
+        span{
+            margin-top: -15px;
+            font-size: 16px;
+        }
+    }
+    #radioError{
+        margin-top: 5px;
+    }
+
+    #cbError {
+        margin-top: -15px;
+        margin-bottom: 5px;
+    }
+}
+
+#nav ul{
+    margin-bottom: 0px !important;
+}
