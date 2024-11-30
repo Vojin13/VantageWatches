@@ -1,4 +1,3 @@
-console.log("ucitan")
 
 const allWatches = [
     {
@@ -156,8 +155,10 @@ const brands = [
     'Longines'
 ]
 
+let pathNameArray = window.location.pathname.split('/')
 
-let pathName = window.location.pathname
+let pathName = '/'+pathNameArray[pathNameArray.length-1]
+
 
 if(pathName == '/')
     pathName = '/index.html'
