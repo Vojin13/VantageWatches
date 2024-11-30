@@ -511,7 +511,7 @@ $(document).ready(function(){
         $(this).css(`box-shadow`,`none`)
     })
 
-    $('#submit').hover(
+    $('#form #submit').hover(
         function() {
             $(this).css({'background-color':'#002762','color':'#FFFFFF'})
         },
