@@ -518,6 +518,4 @@ $(document).ready(function(){
         }
     )
 
-    $
-
 })
