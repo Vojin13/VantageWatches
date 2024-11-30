@@ -35,8 +35,9 @@
             height: 150px;
             font-size: 18px;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
             &:focus{
-                box-shadow: 0px 0px 5px $orange;
+                transition: all 0.2s ease;
             }
         }
 
@@ -55,8 +56,9 @@
         }
 
         input[type="text"]{
+            transition: all 0.3s ease;
             &:focus{
-                box-shadow: 0px 0px 5px $orange;
+                transition: all 0.3s ease;
             }
         }
 
@@ -72,6 +74,7 @@
             width: 40%;
             margin: 0px auto;
             color: #002762;
+            transition: all 0.3s ease;
         }
 
         #formBottom{

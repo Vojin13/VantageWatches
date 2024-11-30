@@ -497,6 +497,27 @@ function testRegEx(regEx,object) {
 
 $(document).ready(function(){
     
-    
-    
+    $('input[type="text"]').focus(function(){
+        $(this).css(`box-shadow`,`0 0 7px #FF8000`)
+    }).blur(function(){
+        $(this).css(`box-shadow`,`none`)
+    })
+
+    $('textarea').focus(function(){
+        $(this).css(`box-shadow`,`0 0 7px #FF8000`)
+    }).blur(function(){
+        $(this).css(`box-shadow`,`none`)
+    })
+
+    $('#submit').hover(
+        function() {
+            $(this).css({'background-color':'#002762','color':'#FFFFFF'})
+        },
+        function() {
+            $(this).css({'background-color':'#FFFFFF','color':'#002762'})
+        }
+    )
+
+    $
+
 })
