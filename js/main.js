@@ -117,22 +117,22 @@ const allWatches = [
 const nav = [
     {
         PageName: 'Home',
-        Link: '/index.html',
+        Link: 'index.html',
         Active: false,
     },
     {
         PageName: 'Shop',
-        Link: '/shop.html',
+        Link: 'shop.html',
         Active: false,
     },
     {
         PageName: 'Contact',
-        Link: '/contact.html',
+        Link: 'contact.html',
         Active: false,
     },
     {
         PageName: 'About author',
-        Link: '/about-author.html',
+        Link: 'about-author.html',
         Active: false,
     }
 ]
@@ -208,7 +208,7 @@ if(pathName == '/index.html')
                         <p>${watch.Serial}</p>
                         <p>${watch.Name}</p>
                         <p>${watch.Price}</p>
-                        <a href='/shop.html'>Buy now</a>
+                        <a href='shop.html'>Buy now</a>
                         </div>`
     }
 
@@ -339,7 +339,7 @@ else if(pathName == '/shop.html'){
                             <p>${watch.Serial}</p>
                             <p>${watch.Name}</p>
                             <p>${watch.Price}</p>
-                            <a href='/contact.html'>Buy now</a>
+                            <a href='contact.html'>Buy now</a>
                             </div>`
         }
 
