@@ -62,6 +62,19 @@
   background-image: radial-gradient(#FFC993, #011426 60%);
 }
 
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 30px;
+  padding: 20px 25px;
+  z-index: 99;
+  text-align: center;
+  background-color: #FFC993;
+  border-radius: 50%;
+  color: #011426;
+}
+
 #newArrivals #watches {
   display: flex;
   justify-content: space-between;

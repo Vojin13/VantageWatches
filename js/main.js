@@ -520,4 +520,28 @@ $(document).ready(function(){
         }
     )
 
+    $('#menu ul li a').hover(
+        function() {
+            $(this).css('color', '#FFC993')
+        },
+        function() {
+            if (!$(this).hasClass('active-link')) {
+                $(this).css('color', '#FFFFFF')
+            }
+        }
+    )
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('.back-to-top').fadeIn('slow')
+        } else {
+            $('.back-to-top').fadeOut('slow')
+        }
+    })
+
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 200, 'swing')
+        return false
+    })
+
 })
