@@ -376,7 +376,7 @@ else if(pathName == '/contact.html')
     const email = document.querySelector("#email")
     const phone = document.querySelector("#phone")
     const brand = document.querySelector("#brand")
-    const message = document.querySelector("#message")
+    const message = document.querySelector("#msg")
     const submit = document.querySelector("#submit")
 
     const radioError = document.querySelector('#radioError')
@@ -431,15 +431,12 @@ else if(pathName == '/contact.html')
         }
 
         if(valid) {
-
+            message.nextElementSibling.classList.remove('d-none')
         } 
         else {
-
+            message.nextElementSibling.classList.add('d-none')
         }
-
-        
-        
-        
+ 
     })
 
     renderFooter('#footer-links', nav)
