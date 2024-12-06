@@ -382,7 +382,7 @@ footer #copyright p {
   align-items: center;
   flex-direction: row;
   gap: 10%;
-  padding: 50px 0px;
+  padding-top: 50px;
   width: 80%;
 }
 #contact h1 {
@@ -519,6 +519,18 @@ footer #copyright p {
 
 #nav ul {
   margin-bottom: 0px !important;
+}
+
+#FAQs {
+  padding-bottom: 50px;
+}
+#FAQs div p {
+  font-size: 16px;
+}
+
+.ui-accordion .ui-accordion-header-active {
+  background-color: #011426;
+  border: 0px;
 }
 
 #about-author-section {

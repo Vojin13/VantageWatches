@@ -439,6 +439,44 @@ else if(pathName == '/contact.html')
  
     })
 
+    const questions = [
+        {
+            Title: "How can I contact customer support?",
+            Answer: "For any inquiries or product support, you can reach us via email at support@vantagewatches.com, or by calling +123 456 7890. You can also fill out the contact form on our website."
+        },
+        {
+            Title: "How can I track my order status?",
+            Answer: "You can track the status of your order by logging into your account on our website and navigating to the 'My Orders' section. You will also receive email notifications at every stage of your delivery."
+        },
+        {
+            Title: "Do you offer international shipping?",
+            Answer: "Yes, we offer international shipping to most countries. Shipping rates and delivery times vary depending on your location. You can check the shipping options at checkout."
+        },
+        {
+            Title: "Can I return or exchange a product?",
+            Answer: "Yes, we offer a 30-day return policy for most products. If you're not satisfied with your purchase, you can return or exchange the item within 30 days of receiving it. Please visit our Returns & Exchanges page for more details."
+        },
+        {
+            Title: "What payment methods do you accept?",
+            Answer: "We accept various payment methods, including credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. All transactions are secure and processed through our trusted payment partners."
+        },
+        {
+            Title: "How do I take care of my Vantage Watch?",
+            Answer: "To keep your Vantage watch in the best condition, we recommend cleaning it regularly with a soft cloth and storing it in a dry, cool place when not in use. Avoid exposing it to extreme temperatures or moisture. Please refer to our Watch Care page for more tips."
+        }
+    ]
+
+    const FAQs = document.querySelector("#FAQs")
+
+    html = ``
+
+    for(let element of questions)
+    {
+        html += `<h3>${element.Title}</h3><div><p>${element.Answer}</p></div>`
+    }
+
+    FAQs.innerHTML = html
+    
     renderFooter('#footer-links', nav)
 }
 
@@ -527,6 +565,15 @@ $(document).ready(function(){
             }
         }
     )
+
+    // FAQ
+    if(pathName == '/contact.html')
+        $("#FAQs").accordion({
+            collapsible: true,
+            heightStyle: "content",
+            active: false
+        })
+    
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {

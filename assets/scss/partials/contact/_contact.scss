@@ -1,7 +1,7 @@
 #contact{
     @include displayFlex();
     gap: 10%;
-    padding: 50px 0px;
+    padding-top: 50px;
     width: 80%;
 
     h1{
@@ -150,4 +150,18 @@
 
 #nav ul{
     margin-bottom: 0px !important;
+}
+
+#FAQs{
+    padding-bottom: 50px;
+    div{
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+.ui-accordion .ui-accordion-header-active {
+    background-color: $primary;
+    border: 0px;
 }
