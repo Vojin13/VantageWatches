@@ -181,7 +181,7 @@ if(pathName == '/index.html')
 
     const mainLeftSection = document.querySelector('#main-left')
 
-    html = `<div><h2>${mainWatch.Serial}</h2><h1>${mainWatch.Name}</h1><a href='shop.html'>Find more</a></div>`
+    html = `<div><h2>${mainWatch.Serial}</h2><h1>${mainWatch.Name}</h1><a href='#newArrivals'>Find more <i class="fa-solid fa-arrow-down-long"></i></a></div>`
     mainLeftSection.innerHTML += html
 
     const mainRightSection = document.querySelector('#main-right')

@@ -34,6 +34,12 @@
     #main-content{
         @include displayFlex();
         height: 90vh;
+        position: relative;
+    }
+
+    #arrow-down{
+        color: $black;
+        font-size: 30px;
     }
 
     #main-left{
