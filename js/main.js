@@ -387,7 +387,7 @@ else if(pathName == '/contact.html')
         let valid = true
 
         const watchType = document.querySelector('input[name="watchType"]:checked')
-        const features = document.querySelector('input[name="features"]:checked')
+        const features = document.querySelectorAll('input[name="features"]:checked')
 
         // RegEx
         const regFirstName = /^[A-Z][a-z]{2,15}(\s[A-Z][a-z]{2,15})*$/
@@ -422,7 +422,7 @@ else if(pathName == '/contact.html')
             radioError.classList.add('d-none')
         }
 
-        if(!features) {
+        if(features.length == 0) {
             cbError.classList.remove('d-none')
             valid = false
         }
@@ -432,6 +432,15 @@ else if(pathName == '/contact.html')
 
         if(valid) {
             message.nextElementSibling.classList.remove('d-none')
+            firstName.value = '';
+            lastName.value = '';
+            email.value = '';
+            phone.value = '';
+            brand.selectedIndex = 0;
+            watchType.checked = false;
+            Array.from(features).forEach((element) => {
+                element.checked = false;
+            })
         } 
         else {
             message.nextElementSibling.classList.add('d-none')
